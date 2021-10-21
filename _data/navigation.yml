@@ -1,0 +1,16 @@
+menu:
+  - title: Home
+    url: "#home"
+    icon_class: fa fa-home
+  - title: About
+    url: "#about"
+    icon_class: fa fa-user
+  - title: my Portfolio
+    url: "#work"
+    icon_class: fa fa-briefcase
+  - title: get in touch
+    url: "#contact"
+    icon_class: fa fa-envelope-open
+  - title: my Blog
+    url: "#blog"
+    icon_class: fa fa-comments

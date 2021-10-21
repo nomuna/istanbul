@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {%- include head.html -%}
+</head>
+
+<body class="dark blog">
+    <div class="page">
+        <!-- Main Content Starts -->
+        <!-- Wrapper Starts -->
+        <div class="wrapper">
+            <div class="container-fluid page-title post-title">
+                <div class="content-banner">
+                    <h2 class="text-center">
+                        <span>{{ page.title }}</span>
+                    </h2>
+
+                    <div class="meta">
+                        <span><i class="fa fa-user"></i> <a href="#"> {{ post.author | default: "Admin" }}</a></span>
+                        <span class="date"><i class="fa fa-calendar"></i> {{ site.time | date_to_long_string }}</span>
+                        {%- if page.tags -%}
+                        <span><i class="fa fa-tags"></i> {{ page.tags | array_to_sentence_string }}</span>
+                        {%- endif -%}
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="content">
+                        <!-- Article Starts -->
+                        <article>
+                            <!-- Excerpt Starts -->
+                            <div class="blog-excerpt">
+                             
+                                {{ content }}
+
+                            </div>
+                            <!-- Excerpt Ends -->
+                            <!-- Comments Starts -->
+                            <div class="comments pt-5">
+                                {%- include disqus_comments.html -%}
+                            </div>
+                        </article>
+                        <!-- Article Ends -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content Ends -->
+    </div>
+
+    <!-- Preloader Starts -->
+    {%- include preloader.html -%}
+    <!-- Preloader Ends -->
+
+    <!-- Template JS Files -->
+    {%- include scripts.html -%}
+</body>
+
+</html>
+
+

@@ -1,0 +1,40 @@
+---
+#layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{%- include head.html -%}
+</head>
+
+<body class="dark blog">
+	<div class="page">
+
+		<!-- Wrapper Starts -->
+		<div class="wrapper">
+			<div class="container-fluid page-title">
+				<div class="content-banner">
+					<h2 class="text-center">
+						<span>Blog </span>
+						<span>Posts</span>
+					</h2>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					{{ content }}
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Wrapper Ends -->
+	<!-- Preloader Starts -->
+	{%- include preloader.html -%}
+	<!-- Preloader Ends -->
+
+	<!-- Template JS Files -->
+	{%- include scripts.html -%}
+</body>
+
+</html>

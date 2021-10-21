@@ -1,0 +1,33 @@
+---
+#layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    {%- include head.html -%}
+</head>
+
+
+<body class="{{ page.bodyClass }}">
+    <div class="page animated">
+        {%- if page.header -%}
+        <!-- Header Starts -->
+        {%- include header.html -%}
+        <!-- Header Ends -->
+        {%- endif -%}
+        <!-- Main Content Starts -->
+        {{ content }}
+        <!-- Main Content Ends -->
+    </div>
+
+    <!-- Preloader Starts -->
+    {%- include preloader.html -%}
+    <!-- Preloader Ends -->
+
+    <!-- Template JS Files -->
+    {%- include scripts.html -%}
+</body>
+
+</html>

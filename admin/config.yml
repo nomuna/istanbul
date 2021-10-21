@@ -1,0 +1,229 @@
+# Everything you need to know about configuring the CMS can be found here:-
+# https://www.netlifycms.org/docs/configuration-options/
+
+backend:
+  name: git-gateway # Netlify’s Git Gateway connects to Git provider’s API
+  branch: main # Branch to update (master by default)
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+# when using the default proxy server port
+local_backend: true
+search: false
+
+media_folder: "assets/uploads" # Folder where user uploaded files should go
+
+#publish_mode: editorial_workflow # Enable drafts
+
+collections: # A list of collections the CMS should be able to edit
+  # POSTS
+  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Posts" # Used in the UI, ie.: "New Post"
+    label_singular: "Post" # Used in the UI, ie.: "New Post"
+    folder: "_posts" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          tagname: "h1",
+          required: true,
+        }
+      - {
+          label: "Meta Description",
+          name: "description",
+          widget: "text",
+          required: false,
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD HH:mm:ss",
+        }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - {
+          label: Comments,
+          name: comments,
+          widget: boolean,
+          default: true,
+          required: false,
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          allow_add: true,
+          default: ["news"],
+          required: false,
+        }
+  # POSTS
+  - name: "portfolios" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Portfolios" # Used in the UI, ie.: "New Post"
+    label_singular: "Portfolio" # Used in the UI, ie.: "New Post"
+    folder: "_portfolios" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {
+          label: "Type",
+          name: type,
+          widget: "select",
+          options: ["image", "youtube", "video"],
+        }
+      - { label: "Image", name: "Image", widget: "image", required: false }
+      - { label: "Youtube", name: "youtube", widget: "string", required: false }
+      - {
+          label: "Video",
+          name: "video",
+          widget: "file",
+          required: false,
+          media_library: { config: { multiple: false, choose_url: true } },
+        }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          tagname: "h1",
+          required: true,
+        }
+      - { label: "Name", name: "project", widget: "string", required: true }
+      - { label: "Client", name: "client", widget: "string", required: true }
+      - {
+          label: "Duration",
+          name: "duration",
+          widget: "string",
+          required: true,
+        }
+      - { label: "Budget", name: "budget", widget: "string", required: true }
+      - {
+          label: "Preview Url",
+          name: "preview_url",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD HH:mm:ss",
+        }
+
+      - {
+          label: "Technologies",
+          name: "technologies",
+          widget: "list",
+          allow_add: true,
+          required: false,
+        }
+
+    #Others
+  - name: others
+    label: Others
+    editor:
+      preview: false
+    files:
+      - file: _data/navigation.yml
+        label: Main Menus
+        name: main_menus
+        fields:
+          - label: Menu
+            name: menu
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: "Path (example: #path)", name: url, widget: string }
+              - {
+                  label: icon_class (font awsome 4.7 icon class),
+                  name: icon_class,
+                  widget: string,
+                }
+      #author profile information
+      - file: _data/settings.yml
+        label: Settings
+        name: settings
+        fields:
+          - {
+              label: Color,
+              name: color,
+              widget: select,
+              options:
+                [
+                  { label: "Blue", value: "blue" },
+                  { label: "Red", value: "red" },
+                  { label: "Goldenrod", value: "goldenrod" },
+                  { label: "Magenta", value: "magenta" },
+                  { label: "Yellowgreen", value: "yellowgreen" },
+                  { label: "Orange", value: "orange" },
+                  { label: "Green", value: "green" },
+                  { label: "Yellow", value: "yellow" },
+                ],
+              required: false,
+              default: "blue",
+            }
+          - {
+              label: Style,
+              name: style,
+              widget: select,
+              options:
+                [
+                  { label: "Fullscreen Dark", value: "fullscreen-dark" },
+                  {
+                    label: "Fullscreen Image Overlay",
+                    value: "fullscreen-image-overlay",
+                  },
+                  {
+                    label: "Background Video Dark",
+                    value: "background-video-dark",
+                  },
+                  {
+                    label: "Background Video Light",
+                    value: "background-video-light",
+                  },
+                  {
+                    label: "Background Image Dark",
+                    value: "background-image-dark",
+                  },
+                  {
+                    label: "Background Image Light",
+                    value: "background-image-light",
+                  },
+                ],
+              required: false,
+            }
+          - {
+              label: "Google Analytics Code",
+              name: "google_analytics",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Disqus Shortname",
+              name: "disqus_shortname",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "getform.io Id",
+              name: "getform_id",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Google Site Verification",
+              name: "google_site_verification",
+              widget: "string",
+              required: false,
+            }

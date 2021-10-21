@@ -1,0 +1,100 @@
+<section id="work">
+    <div class="portfolio-container">
+        <!-- Main Heading Starts -->
+        <div class="container page-title text-center">
+            <h2 class="text-center">{{ site.portfolio.tagline }}</h2>
+            <span class="title-head-subtitle">{{ site.portfolio.subtitle }}</span>
+        </div>
+        <!-- Main Heading Ends -->
+        <div class="portfolio-section">
+            <div class="container cd-container">
+                <div>
+                    <!-- Portfolio Items Starts -->
+                    <ul class="row" id="portfolio-items">
+                        {%- for portfolio in site.portfolios -%}
+                        <!-- Portfolio Item Starts -->
+                        <li class="col-12 col-md-6 col-lg-4">
+                            <a href="#0" data-type="project-{{forloop.index}}">
+                                <img src="{{ portfolio.image }}" alt="Project" class="img-fluid">
+                                <div>
+                                    <span>{{ portfolio.type }}</span>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- Portfolio Item Ends -->
+                        {%- endfor -%}
+                    </ul>
+                    <!-- Portfolio Items Ends -->
+                </div>
+            </div>
+        </div>
+        <!-- PORTFOLIO OVERLAY STARTS -->
+        <div class="portfolio-overlay"></div>
+        <!-- PORTFOLIO OVERLAY ENDS -->
+    </div>
+
+    {%- for portfolio in site.portfolios -%}
+    <!-- Portfolio Project Content Starts -->
+    <div class="project-info-container project-{{forloop.index}}">
+        <!-- Main Content Starts -->
+        <div class="project-info-main-content">
+            {%- if portfolio.type == 'youtube' -%}
+            <div class="videocontainer">
+                <iframe class="youtube-video"
+                    src="{{ portfolio.item_link }}?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer"
+                    allowfullscreen></iframe>
+            </div>
+            {%- elsif portfolio.type == 'video' -%}
+            <video id="video" class="responsive-video" controls="" poster="{{ portfolio.item_link }}">
+                <source src="{{ portfolio.video }}" type="video/mp4">
+            </video>
+            {%- else -%}
+            <img src="{{ portfolio.product_image | relative_url }}" alt="Project Image">
+            {%- endif -%}
+        </div>
+        <!-- Main Content Ends -->
+        <!-- Project Details Starts -->
+        <div class="projects-info row">
+            <div class="col-12 col-sm-6 p-none">
+                <h3 class="font-weight-600 uppercase">{{ portfolio.type }} Format</h3>
+                <ul class="project-details">
+                    <li>
+                        <i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label">
+                            Title </span>: <span class="font-weight-600 uppercase">{{ portfolio.title }}</span>
+                    </li><li>
+                        <i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label">
+                            Project </span>: <span class="font-weight-600 uppercase">{{ portfolio.project }}</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client
+                        </span>: <span class="font-weight-600 uppercase">{{ portfolio.client }}</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label">
+                            Duration </span>: <span class="font-weight-600 uppercase">{{ portfolio.duration }}</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-code"></i> <span class="font-weight-400 project-label">
+                            Technologies</span> : <span class="font-weight-600 uppercase">{{ portfolio.technologies
+                            }}</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-money"></i> <span class="font-weight-400 project-label">
+                            Budget</span> : <span class="font-weight-600 uppercase">{{ portfolio.budget }}</span>
+                    </li>
+                </ul>
+                <a href="{{ portfolio.preview_url }}" target="_blank" class="btn"><span><i
+                            class="fa fa-external-link"></i>preview</span></a>
+            </div>
+            <div class="col-6 p-none text-right">
+                <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
+            </div>
+        </div>
+        <!-- Project Details Ends -->
+    </div>
+    <!-- Portfolio Project Content Ends -->
+    {%- endfor -%}
+    
+    <!-- Portfolio Project Content Ends -->
+    <span class="back-mobile close-project"><i class="fa fa-arrow-left"></i></span>
+</section>

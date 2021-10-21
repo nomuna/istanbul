@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Istanbul - Personal Portfolio Jekyll Template</title>
+        <meta name="description" content="">
+		<!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+        
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+        
+        <!-- Syntax Highlighter -->
+        <link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shCore.css" media="all">
+        <link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
+		
+		<!-- Font Awesome CSS-->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- Normalize/Reset CSS-->
+		<link rel="stylesheet" href="css/normalize.min.css">
+		<!-- Main CSS-->
+        <link rel="stylesheet" href="css/main.css">
+		
+    </head>
+	
+    <body id="welcome">
+    
+        <aside class="left-sidebar">
+            <div class="logo">
+                <a href="#welcome">
+					<h1>Istanbul</h1>
+                </a>
+            </div>
+            <nav class="left-nav">
+                <ul id="nav">
+                    <li class="current"><a href="#welcome">Welcome</a></li>
+                    <li><a href="#basic">Basic</a></li>
+                    <li><a href="#tmpl-structure">Structure</a></li>
+                    <li><a href="#css-structure">CSS Files</a></li>
+                    <li><a href="#javascript">JavaScript Libraries</a></li>
+                    <li><a href="#contact-form">Contact Form</a></li>
+                    <li><a href="#system_preparation">System Preparation</a></li>
+					<li><a href="#installation">Installation</a></li>
+					<li><a href="#netlify">netlify</a></li>
+                    <li><a href="#credit">Source and Credit</a></li>
+                </ul>
+            </nav>
+        </aside>
+		
+		<div id="main-wrapper">
+		    <div class="main-content">
+		        <section id="welcome">
+		            <div class="content-header">
+		                <h1>Istanbul - Personal Portfolio JEKYLL Template</h1>
+		            </div>
+		            <div class="welcome">
+                        
+                        <h2 class="twenty">Welcome To Istanbul - Personal Portfolio JEKYLL Template</h2>
+
+                        <p>Firstly, a huge thanks for purchasing this theme, your support is truly appreciated!</p>
+
+                        <p>This document covers the installation and use of this theme and often reveals answers to common problems and issues - read this document thoroughly if you are experiencing any difficulties. If you have any questions that are beyond the scope of this document, feel free to email at <code><a href="mailto:support@jubayed.net">support@jubayed.net</a></code> Thank you so much!</p>
+		            </div>
+		            
+		            <div class="features">
+		                <h2 class="twenty">Template Features</h2>
+		                
+						<ul>
+							<li>Responsive Layout</li>
+							<li>8 Color Skins</li>
+							<li>Bootstrap 4 Framework</li>
+							<li>Light/Dark</li>
+							<li>Smoooth transitions</li>
+							<li>Live Style Switcher</li>
+							<li>Clean Code</li>
+							<li>W3C Validated</li>
+							<li>HTML5 &amp; CSS3</li>
+							<li>Cross Browser Compatible</li>
+							<li>100% Customizable, all colors can be customized</li>
+							<li>Project Image Format</li>
+							<li>Project Slider Format</li>
+							<li>Project Youtube Format</li>
+							<li>Project Local Video Format</li>
+							<li>Font Awesome Icons</li>
+							<li>Well-commented code</li>
+							<li>Google Fonts</li>
+							<li>Working Ajax Contact Form</li>
+						</ul>
+		            </div>
+
+		        </section>
+		        
+		        <section id="basic">
+                    <div class="content-header">
+		                <h1>Istanbul - Personal Portfolio Jekyll Template</h1>
+                    </div>
+                    <h2 class="title">Basic</h2>
+                    
+                    <div class="section-content">
+                        <ol>
+                            <li>After unzip the download pack, you'll found a Template Folder with all the files.</li>
+                            <li>You can view this Template in any browser, you can display or edit the Template without an internet connection.(May not wotrk fonts and google map).</li>
+
+							<li> This section that will not work is the Contact Section which contains formspree.io form service for send messages.</li>
+
+                            <li>Now go to your github account and create repository (name like <code>yourname.github.io</code>).
+                            	 Push the content of the Template on your github repo.
+                            </li>
+                            <li>Once the files are done uploading go to 
+                            	<code>yourname.github.io</code>
+                            </li>
+                            <li>Enjoy</li>
+                        </ol>
+                    </div>
+		            
+		        </section>
+
+
+		        <section id="tmpl-structure">
+		            <h2 class="title">Template Structure</h2>
+		            <p class="fifteen">All information within the main content area is nested within a body tag. The general template structure is pretty the same throughout the template. Here is the general structure of main page (index.html).</p>
+		            <pre class="brush: html">
+<div class="page">
+
+	<!-- Header Starts -->
+	<header id="header">
+		
+		<!-- Stretchy Navigation Ends -->
+	</header>
+	<!-- Header Ends -->
+	<!-- Main Content Starts -->
+	<main id="main">
+		<!-- Back To Home Starts [ONLY MOBILE] -->
+		<span class="back-mobile" id="back-mobile"><i class="fa fa-arrow-left"></i></span>
+		
+		<!-- Blog Section Ends -->
+	</main>
+</div>
+<!-- Main Content Ends -->
+<!-- Preloader Starts -->
+<div class="preloader">
+	
+</div>
+<!-- Preloader Ends -->
+
+		            </pre>
+		        </section>
+
+
+		        <section id="css-structure">
+		            <h2 class="title">CSS Files and Structure</h2>
+		            <p class="fifteen">These are the css files that are loaded into templates in <strong>Head Section</strong>.</p>
+		            <pre class="brush: html">
+		                <!--
+						CSS
+						============================================= -->
+						<!-- Template CSS Files -->
+						<link type="text/css" media="all" href="css/bootstrap.min.css" rel="stylesheet">
+						<link type="text/css" media="all" href="css/jquery.animatedheadline.css" rel="stylesheet">
+						<link type="text/css" media="all" href="css/font-awesome.min.css" rel="stylesheet">
+						<link type="text/css" media="all" href="css/style.css" rel="stylesheet">
+						<link type="text/css" media="all" href="css/skins/yellow.css" rel="stylesheet">
+
+						<!-- Template JS Files -->
+						<script src="js/modernizr.js"></script>
+
+					</pre>
+		            
+		            <h2 class="title">Google Web Fonts</h2>
+		            
+		            <p>By default, the template loads this font from Google Web Font Services, you can change the font with the one that suits you best.</p>
+		            
+		            <pre class="brush:html">		                
+						<!--
+						Google Font
+						=========================== -->
+						<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+							rel="stylesheet">
+						<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+						
+		            </pre>
+		            
+		            <p class="twenty">Remember to change the font into <strong>main.css</strong></p>
+		        </section>
+		        
+		        <section id="javascript">
+		            <h2 class="title">Javascript Files and Structure</h2>
+		            
+		            <p class="fifteen">These are the list of Javascript files that are loaded into templates in end of the <strong>Body Section</strong>.
+		            
+		            <pre class="brush: html">
+				        <!--
+						JavaScripts
+						========================== -->
+						<script src="js/jquery-2.2.4.min.js"></script>
+						<script src="js/jquery.animatedheadline.js"></script>
+						<script src="js/bootstrap.min.js"></script>
+						<script src="js/transition.js"></script>
+						<!-- Main JS Initialization File -->
+						<script src="js/custom.js"></script>
+		            </pre>
+		        </section>
+		        
+		        <section id="contact-form">
+		            <h2 class="title"> Contact Form </h2>
+
+		            <p>This is a getform.io for sending messages to your email, you should replace <strong>email@yourdomainname.tld</strong> to your email to start receiving messages.</p>
+					<pre class="brush:html">
+						<form action="https://getform.io/f/{{site.data.settings.getform_id}}" method="POST">
+							<input type="text" name="name">
+							<input type="email" name="_replyto">
+							<input type="submit" value="Send">
+						</form> 
+						<script>
+						$("#ajaxForm").submit(function (e) {
+								e.preventDefault();
+								var action = $(this).attr("action");
+								$.ajax({
+									type: "POST",
+									url: action,
+									crossDomain: true,
+									data: new FormData(this),
+									dataType: "json",
+									processData: false,
+									contentType: false,
+									headers: {
+										"Accept": "application/json"
+									}
+								}).done(function () {
+									$('.success').addClass('is-active');
+								}).fail(function () {
+									alert('An error occurred! Please try again later.')
+								});
+							});
+						</script>
+					</pre>
+					
+		        </section>
+
+		        <section id="system_preparation">
+		        	<h2 class="title"> System Preparation </h2>
+
+                    <div class="section-content">
+                        <ol>
+                            <li>To use this project, you'll need the following things installed on your machine.</li>
+                            <li>
+                            	1. [Jekyll] (http://jekyllrb.com/) - <code>$ gem install jekyll bundler</code> 
+                            </li>
+                            <li>
+                            2. [NodeJS] (http://nodejs.org) - use the installer.
+                        	</li>
+
+                            <li>
+                            	3. [GulpJS] (https://github.com/gulpjs/gulp) - 
+                            	<code>$ npm install -g gulp</code> 
+                            	(mac users may need sudo)
+                            </li>
+                        </ol>
+                    </div> 
+                 </section>
+
+                <section id="installation">
+
+		        	<h2 class="title"> Installation </h2>
+
+                    
+
+                    <h3 class="title"> Local Instalation </h3>
+
+
+                    <div class="section-content">
+                        <ol>
+                            <li>1. Inside the directory, <code>run npm install</code> .</li>
+                            <li>2. Enjoy</li>
+                        </ol>
+                    </div> 
+
+                    
+                    <h3 class="title"> Development Mode </h3>
+
+
+                    <div class="section-content">
+                        <ol>
+                            <li>This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.</li>
+                        </ol>
+                    </div> 
+
+                    <pre class="brush: bash">$ gulp</pre>
+
+                    <div class="section-content">
+                        <ol>
+                            <li>This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.</li>
+                        </ol>
+                    </div> 
+
+
+
+                    <h3 class="title"> Deploy with Gulp </h3>
+
+
+                    <div class="section-content">
+                        <ol>
+                            <li>
+                            	1. You can easily deploy your site build to a gh-pages branch. 
+                            </li>
+                            <li>
+                            2. First, follow the instructions at [gulp-gh-pages](https://github.com/rowoot/gulp-gh-pages) to get your branch prepared for the deployment and to install the module.
+                        	</li>
+                            <li> 
+                            Then, in <code>gulpfile.js</code> you'll want to include something like the code below.
+                        	</li>
+                            <li> 
+                            	<code>gulp.src()</code> 
+                            	needs to be the path to your final site folder, which by default will be
+                            	 <code>_site</code>. 
+                            	If you change the 
+                            	<code>destination</code> 
+                            	in your 
+                            	<code>_config.yml</code> 
+                            	file, be sure to reflect that in your gulpfile.
+                            </li>
+                        </ol>
+                    </div> 
+
+
+                    <pre class="brush: javascript">
+
+function watch() {
+  gulp.watch(paths.styles.src, style)
+  //gulp.watch(paths.scripts.src, js)
+  gulp.watch(
+    [
+    '*.html',
+    '_layouts/*',
+    '_posts/*',
+    '_portfolios/*',
+    '_data/*',
+    '_includes/*',
+    'assets/*/*',
+    'assets/*/*/*',
+    'admin/*'
+  ],
+  gulp.series(jekyllBuild, browserSyncReload));
+}
+                    </pre>
+
+		        </section>
+
+				<section id="netlify">
+					<h2 class="title"> Netlify cms (<b>jekyll + content management = ♥</b>)</h2>
+				
+					<div class="section-content">
+						<p>Trusted by Facebook, Citrix, and Verizon, <a href="https://netlify.com">Netlify</a> leverages serverless functions and continuous deployment to deliver
+						sites faster than other configurations. The hosting platform bets on JAMstack and unifies JavaScript, APIs, and Markup,
+						creating an infrastructure that’s well suited for both developers and content editors. more details please visite <a href="https://www.netlifycms.org/docs/intro/">netlifycms</a> and <a href="https://scotch.io/tutorials/get-started-with-netlify-the-simplest-way-to-deploy-your-javascript-apps">Get started with netlify form scotch.io</a></p>
+						
+						<p>
+							Get the speed, security, and scalability of a static site, while still providing a convenient editing interface for
+							content. check admin directory. all of configuration available here. if you are unable to use feel free to contact us. our developer
+							assets you <b>24/7</b>.
+						</p>
+						
+						<pre class="brush:bash">
+.
+├── admin  					# netlify cms 
+├── assets
+│   ├── css
+│   │   └── skins
+│   ├── fonts
+│   ├── img
+│   │   ├── blog
+│   │   └── projects
+│   ├── js
+│   └── uploads
+├── blog
+├── _data
+├── _html
+├── _includes
+│   ├── hero
+│   └── sections
+├── _layouts
+├── _portfolios
+└── _posts
+
+						</pre>
+						<p>if you are not interesed to use netlifycms. normaly delete <b>admin</b> direcoty or as your wish</p>
+					</div>
+				</section>
+
+
+		        <section id="credit">
+		            <h2 class="title">Source and Credit</h2>		            
+		            <div class="script-source">
+		                
+
+						<p><em>CSS files</em></p>
+
+						<ul>
+							<li>
+								<strong>jquery.animatedheadline.css</strong> : <a href="https://github.com/GeoffSelby/jquery-animated-headlines"
+									rel="nofollow">https://github.com/GeoffSelby/jquery-animated-headlines</a>
+							</li>
+							<li>
+								<strong>bootstrap.min.css</strong> : <a href="https://getbootstrap.com/"
+									rel="nofollow">https://getbootstrap.com/</a>
+							</li>
+							<li>
+								<strong>font-awesome.min.css</strong> : <a href="http://fortawesome.github.io/Font-Awesome/"
+									rel="nofollow">http://fortawesome.github.io/Font-Awesome</a>
+							</li>
+						</ul>
+
+						<p><em>JS files</em></p>
+						<ul>
+							<li>
+								<strong>jQuery (v2.2.4)</strong> : <a href="http://code.jquery.com/" rel="nofollow">http://code.jquery.com/</a>
+							</li>
+							<li>
+								<strong>Bootstrap </strong> : <a href="https://getbootstrap.com/" rel="nofollow">https://getbootstrap.com/</a>
+							</li>
+							<li>
+								<strong>Transition </strong> : Roman Kravchuk (JeremyLuis)
+							</li>
+							<li>
+								<strong>Modernizr</strong> : <a
+									href="http://www.modernizr.com/download/#-touch-shiv-addtest-teststyles-prefixes"
+									rel="nofollow">http://www.modernizr.com/download/#-touch-shiv-addtest-teststyles-prefixes</a>
+							</li>
+							<li>
+								<strong>jQuery Animated Headlines</strong> : <a href="https://github.com/GeoffSelby/jquery-animated-headlines"
+									rel="nofollow">https://github.com/GeoffSelby/jquery-animated-headlines</a>
+							</li>
+						</ul>
+
+						<p><em>Images </em></p>
+						<ul>
+
+							<li><a href="https://pixabay.com/photos/woman-girl-sexy-model-portrait-2998996/"
+									rel="nofollow">https://pixabay.com/photos/woman-girl-sexy-model-portrait-2998996/</a></li>
+							<li><a href="https://unsplash.com/photos/ijgiYCvkrSk" rel="nofollow">https://unsplash.com/photos/ijgiYCvkrSk</a>
+							</li>
+							<li><a href="https://www.pexels.com/photo/man-in-green-crew-neck-shirt-997489/"
+									rel="nofollow">https://www.pexels.com/photo/man-in-green-crew-neck-shirt-997489/</a></li>
+							<li><a href="https://www.pexels.com/photo/ali-madad-sakhirani-beard-cap-grass-1080688/"
+									rel="nofollow">https://www.pexels.com/photo/ali-madad-sakhirani-beard-cap-grass-1080688/</a></li>
+							<li><a href="https://unsplash.com/photos/OnxKvLS0UUo" rel="nofollow">https://unsplash.com/photos/OnxKvLS0UUo</a>
+							</li>
+							<li><a href="https://www.pexels.com/photo/man-wearing-black-zip-up-jacket-near-beach-smiling-at-the-photo-736716/"
+									rel="nofollow">https://www.pexels.com/photo/man-wearing-black-zip-up-jacket-near-beach-smiling-at-the-photo-736716/</a>
+							</li>
+							<li><a href="https://www.pexels.com/photo/portrait-photo-of-smiling-man-with-his-arms-crossed-standing-in-front-of-white-wall-2379004/"
+									rel="nofollow">https://www.pexels.com/photo/portrait-photo-of-smiling-man-with-his-arms-crossed-standing-in-front-of-white-wall-2379004/</a>
+							</li>
+							<li><a href="https://www.pexels.com/photo/brown-haired-girl-in-white-sleeveless-dress-standing-beside-black-painted-wall-756453/"
+									rel="nofollow">https://www.pexels.com/photo/brown-haired-girl-in-white-sleeveless-dress-standing-beside-black-painted-wall-756453/</a>
+							</li>
+							<li><a href="https://www.pexels.com/photo/nature-forest-trees-fog-4827/"
+									rel="nofollow">https://www.pexels.com/photo/nature-forest-trees-fog-4827/</a></li>
+							<li><a href="https://www.pexels.com/photo/person-using-silver-macbook-pro-1181467/"
+									rel="nofollow">https://www.pexels.com/photo/person-using-silver-macbook-pro-1181467/</a></li>
+							<li><a href="https://www.pexels.com/photo/group-of-people-having-a-meeting-1204649/"
+									rel="nofollow">https://www.pexels.com/photo/group-of-people-having-a-meeting-1204649/</a></li>
+							<li><a href="https://www.pexels.com/photo/adult-beard-black-jacket-cup-373899/"
+									rel="nofollow">https://www.pexels.com/photo/adult-beard-black-jacket-cup-373899/</a></li>
+							<li><a href="https://www.pexels.com/photo/closeup-photo-of-woman-with-brown-coat-and-gray-top-733872/"
+									rel="nofollow">https://www.pexels.com/photo/closeup-photo-of-woman-with-brown-coat-and-gray-top-733872/</a>
+							</li>
+							<li><a href="https://www.pexels.com/photo/woman-in-black-scoop-neck-shirt-smiling-38554/"
+									rel="nofollow">https://www.pexels.com/photo/woman-in-black-scoop-neck-shirt-smiling-38554/</a></li>
+							<li><a href="https://www.pexels.com/photo/startup-planning-notes-mac-book-7357/"
+									rel="nofollow">https://www.pexels.com/photo/startup-planning-notes-mac-book-7357/</a></li>
+							<li><a href="https://www.pexels.com/photo/person-woman-apple-hotel-5329/"
+									rel="nofollow">https://www.pexels.com/photo/person-woman-apple-hotel-5329/</a></li>
+							<li><a href="https://www.pexels.com/photo/adult-beard-concentrated-concentration-6972/"
+									rel="nofollow">https://www.pexels.com/photo/adult-beard-concentrated-concentration-6972/</a></li>
+						</ul>
+						<p>Images used in Portfolio Section</p>
+						<ul>
+							<li><a href="https://www.pexels.com/photo/green-plant-with-red-ornament-planted-in-white-ceramic-pot-1048041/"
+									rel="nofollow">https://www.pexels.com/photo/green-plant-with-red-ornament-planted-in-white-ceramic-pot-1048041/</a>
+							</li>
+							<li><a href="https://www.pexels.com/photo/selective-focus-photography-of-three-succulent-plants-796620/"
+									rel="nofollow">https://www.pexels.com/photo/selective-focus-photography-of-three-succulent-plants-796620/</a>
+							</li>
+							<li><a href="https://www.pexels.com/photo/strawberry-drop-on-milk-2064359/"
+									rel="nofollow">https://www.pexels.com/photo/strawberry-drop-on-milk-2064359/</a></li>
+							<li><a href="https://www.pexels.com/photo/close-up-leaves-plant-pot-plant-370473/"
+									rel="nofollow">https://www.pexels.com/photo/close-up-leaves-plant-pot-plant-370473/</a></li>
+							<li><a href="https://www.pexels.com/photo/brush-close-up-cosmetics-cup-414729/"
+									rel="nofollow">https://www.pexels.com/photo/brush-close-up-cosmetics-cup-414729/</a></li>
+							<li><a href="https://www.pexels.com/photo/pink-tulip-flowers-in-white-cup-843232/"
+									rel="nofollow">https://www.pexels.com/photo/pink-tulip-flowers-in-white-cup-843232/</a></li>
+							<li><a href="https://www.pexels.com/photo/round-silver-colored-analog-watch-with-silver-colored-strap-1190830/"
+									rel="nofollow">https://www.pexels.com/photo/round-silver-colored-analog-watch-with-silver-colored-strap-1190830/</a>
+							</li>
+							<li><a href="https://www.pexels.com/photo/black-and-white-mockup-tag-on-white-surface-1493322/"
+									rel="nofollow">https://www.pexels.com/photo/black-and-white-mockup-tag-on-white-surface-1493322/</a></li>
+						</ul>
+
+						<p>Youtube Video</p>
+						<ul>
+							<li><a href="https://www.youtube.com/watch?v=0gv7OC9L2s8"
+									rel="nofollow">https://www.youtube.com/watch?v=0gv7OC9L2s8</a></li>
+						</ul>
+
+						<p>Local Video</p>
+						<ul>
+							<li><a href="https://www.pexels.com/video/a-view-of-hot-air-balloons-in-the-air-and-woman-riding-her-vehicle-3015510/"
+									rel="nofollow">https://www.pexels.com/video/a-view-of-hot-air-balloons-in-the-air-and-woman-riding-her-vehicle-3015510/</a>
+							</li>
+							<li><a
+									href="https://videohive.net/item/modern-elegant-slideshow/19508293">https://videohive.net/item/modern-elegant-slideshow/19508293</a>
+							</li>
+
+						</ul>
+
+						<p>Font Icons:</p>
+						<ul>
+							<li><a href="http://fontawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a></li>
+						</ul>
+
+						<p>Google Fonts</p>
+						<ul>
+							<li><a href="https://fonts.google.com/specimen/Open+Sans"
+									rel="nofollow">https://fonts.google.com/specimen/Open+Sans</a></li>
+							<li><a href="https://fonts.google.com/specimen/Poppins" rel="nofollow">https://fonts.google.com/specimen/Poppins</a>
+							</li>
+						</ul>
+
+
+		            </div>
+		        </section>
+		    </div>
+		</div>
+		
+		
+		<!-- Essential JavaScript Libraries
+		==============================================-->
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.nav.js"></script>
+        <script type="text/javascript" src="syntax-highlighter/scripts/shCore.js"></script> 
+        <script type="text/javascript" src="syntax-highlighter/scripts/shBrushXml.js"></script> 
+        <script type="text/javascript" src="syntax-highlighter/scripts/shBrushCss.js"></script> 
+        <script type="text/javascript" src="syntax-highlighter/scripts/shBrushJScript.js"></script> 
+        <script type="text/javascript" src="syntax-highlighter/scripts/shBrushBash.js"></script> 
+
+        <script type="text/javascript" src="syntax-highlighter/scripts/shBrushRuby.js"></script>
+
+
+        <script type="text/javascript">
+            SyntaxHighlighter.all()
+        </script>
+        <script type="text/javascript" src="js/custom.js"></script>
+		
+    </body>
+</html>

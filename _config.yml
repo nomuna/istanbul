@@ -1,0 +1,238 @@
+
+####################################
+######     Global start     ######
+####################################
+name                : 'ISTANBUL'
+title               : ''
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl             : "" # the subpath of your site, e.g. /blog
+url                 : "" #  7277783  the base hostname & protocol for your site, e.g. http://example.com
+favicon: '/assets/img/favicon.png'
+
+paginate: 12
+paginate_path: "/blog/page:num/"
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:slug/
+  pages:
+    output: true
+    permalink: /:path/index:output_ext
+  portfolios:
+    output: false
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      share: true
+  # _portfolios
+  - scope:
+      path: "_portfolios"
+      type: portfolios
+    values:
+      project: Website
+      client: Envato
+      duration: 3 months
+      technologies: html, javascript
+      budget: 1550 USD
+      preview_url: '#'
+      type: image
+
+
+# Social Sharing
+twitter:
+  username               : ''
+facebook:
+  username               : ''
+  app_id                 : ''
+  publisher              : ''
+og_image                 :  '' # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : '' # Person or Organization (defaults to Person)
+  name                   : '' # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+
+timezone: '' # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+## content
+hero:
+  image: /assets/img/fullscreendark.jpg
+about:
+  address_label: Address
+  address: Istanbul
+  avatar: /assets/img/dark-about.jpg
+  birthdate_label: Birthdate
+  birthdate: 21 june 1990
+  description: I'm a Freelance UI/UX Designer and Developer based in London, England.
+    I strives to build immersive and beautiful web applications through carefully
+    crafted code and user-centric design.
+  download_cv_label:  download my cv
+  download_cv_url:  "#"
+  
+  dribbble_label: Dribbble
+  dribbble: taylor.dribbble
+  email_label: Email
+  email: you@you.com
+  experience_label: Experience
+  experience: 7 years
+  first_name_label: First Name
+  first_name: Daria
+  freelance_label: Freelance
+  freelance: Available
+  langages_label: Langages
+  langages: English
+  last_name_label: Last Name
+  last_name: Taylor
+  more_about_me: <i class="fa fa-user"></i>more about me
+  nationality_label: Nationality
+  nationality: English
+  phone_label: Phone
+  phone: "+34 21 18 40 10"
+  portfolio: <i class="fa fa-suitcase"></i>portfolio
+  skype_label: Skype
+  skype: daria.taylor
+  subtitle: I design and code beautiful things, and I love what I do.
+  tagline: about <span>me</span>
+contact:
+  description: If you have any suggestion, project or even you want to say Hello..
+    please fill out the form below and I will reply you shortly.
+  dribbble_label: Dribbble
+  dribbble: daria.dribble
+  email_label: email
+  email: info@daria.ua
+  instagram_label: instagram
+  instagram: daria.198
+  phone_label: Phone
+  phone: "+216 21 184 010"
+  subtitle: tips, insights, and best practices about web design and developpment
+  tagline: latest <span>posts</span>
+home:
+  description: 'I am a Freelance UI/UX Designer and Developer based in London, England. I strives to build immersive and beautiful web applications through carefully crafted code and user-centric design.'
+portfolio:
+  subtitle: a few recent design and coding projects. Want to see more? Email me.
+  tagline: my <span>portfolio</span>
+
+
+## loop
+experiences:
+  - year: 2017 - 2019
+    experience_as: web designer
+    experience_at: Envato
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+      nonummy nibh euismod tincidunt ut laoreet diam nonummy.
+  - year: 2014 - 2017
+    experience_as: web developer
+    experience_at: Twitter
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+      nonummy nibh euismod tincidunt ut laoreet diam nonummy.
+  - year: 2010 - 2014
+    experience_as: Consultant
+    experience_at: Google
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+      nonummy nibh euismod tincidunt ut laoreet diam nonummy.
+education:
+  - year: 2007 - 2010
+    degree: Engineering Degree
+    education_at: Istanbul University
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+      nonummy nibh euismod tincidunt ut laoreet diam nonummy.
+  - year: 2005 - 2007
+    degree: Masters Degree
+    education_at: Paris University
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+      nonummy nibh euismod tincidunt ut laoreet diam nonummy.
+  - year: 2001 - 2005
+    degree: Bachelor Degree
+    education_at: Moscow High School
+    description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+      nonummy nibh euismod tincidunt ut laoreet diam nonummy.
+skills:
+  - name: html
+    progress: 80
+  - name: javascript
+    progress: 60
+  - name: css
+    progress: 75
+  - name: jquery
+    progress: 65
+  - name: wordpress
+    progress: 90
+  - name: angular js
+    progress: 85
+  - name: illustrator
+    progress: 60
+  - name: after effects
+    progress: 75
+  - name: photoshop
+    progress: 80

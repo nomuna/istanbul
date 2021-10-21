@@ -1,0 +1,46 @@
+<section id="blog">
+    <div class="container page-title text-center">
+        <h2 class="text-center">{{ site.contact.tagline }}</h2>
+        <span class="title-head-subtitle">{{ site.contact.subtitle }}</span>
+    </div>
+    <div class="container">
+        <div class="row">
+            {%- for post in site.posts limit: 4 -%}
+            <!-- Article Starts -->
+            <div class="col-12 col-sm-6">
+                <article>
+                    <!-- Figure Starts -->
+                    <figure class="blog-figure">
+                        <a href="{{post.url}}">
+                            <img class="img-fluid" src="{{post.thumbnail}}" alt="{{post.title}}">
+                        </a>
+                        <div class="post-date">
+                            <span>23</span>
+                            <span>JUN</span>
+                        </div>
+                    </figure>
+                    <!-- Figure Ends -->
+                    <a href="{{post.url}}">
+                        <h4>{{post.title}}</h4>
+                    </a>
+                    <!-- Excerpt Starts -->
+                    <div class="blog-excerpt">
+                        <p>{{ post.summary | default: post.excerpt }}</p>
+                        <a href="{{post.url}}" class="btn readmore"><span>Read more</span></a>
+                    </div>
+                    <!-- Excerpt Ends -->
+                </article>
+            </div>
+            <!-- Article Ends -->
+            {%- endfor -%}
+
+            <!-- Link To Blog Starts -->
+            <div class="col-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 allposts">
+                <a href="{{site.url}}/blog/" class="btn btn-secondary">
+                    <span> <i class="fa fa-comments"></i>All  posts</span>
+                </a>
+            </div>
+            <!-- Link To Blog Ends -->
+        </div>
+    </div>
+</section>

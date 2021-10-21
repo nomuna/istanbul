@@ -1,0 +1,8 @@
+{%- if site.data.settings.style -%}
+    {% assign include_hero = 'hero/' | append: site.data.settings.style | append: '.html' %}
+
+    {%- include {{include_hero}} -%}
+ 
+{%- else -%}
+    {%- include hero/fullscreen-dark.html -%}
+{%- endif -%}

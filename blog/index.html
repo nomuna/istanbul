@@ -1,0 +1,58 @@
+---
+title: 'Blog - Istanbul Personal Portfolio'
+layout: blog
+description: ''
+keywords: []
+className: ''
+comment: false
+author: ''
+image: ''
+---
+
+<div class="content">
+
+    {%- for post in paginator.posts -%}
+    <!-- Article Start -->
+    <article>
+        <a href="{{ post.url }}">
+            <h4>{{ post.title }}</h4>
+        </a>
+        <!-- Figure Starts -->
+        <figure class="blog-figure">
+            <a href="{{ post.url }}">
+                <img class="responsive-img" src="{{ post.thumbnail }}" alt="{{ post.title }}">
+            </a>
+        </figure>
+        <!-- Figure Ends -->
+        <!-- Excerpt Starts -->
+        <div class="blog-excerpt">
+            <p>{{ post.summary | default: '' }}</p>
+            <a href="{{ post.url }}" class="btn readmore">
+                <span>Read more</span>
+            </a>
+
+            <!-- Meta Starts -->
+            <div class="meta">
+                <span><i class="fa fa-user"></i> <a href="#"> {{ post.author | default: "Admin" }}</a></span>
+                <span class="date"><i class="fa fa-calendar"></i> {{ site.time | date_to_long_string }}</span>
+                {%- if post.tags -%}
+                <span><i class="fa fa-tags"></i> {{ post.tags | array_to_sentence_string }}</span>
+                {%- endif -%}
+                <span class="permalink"><i class="fa fa-link"></i> <a href="{{ post.url }}">permalink</a></span>
+            </div>
+            <!-- Meta Ends -->
+        </div>
+        <!-- Excerpt Ends -->
+    </article>
+    <!-- Article End -->
+    {%- endfor -%}
+
+    <div class="col-12 mx-auto text-center">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="btn btn-secondary refresh">Previous</a>
+        {% endif %}
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="btn btn-secondary refresh">Next</a>
+        {% endif %}
+    </div>
+</div>
